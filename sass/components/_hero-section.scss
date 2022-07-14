@@ -1,0 +1,66 @@
+.hero {
+    background-image: linear-gradient(to right,
+            $first-linear-gradient,
+            $first-linear-gradient),
+        url(../images/background-image-hero.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    max-width: 1600px;
+    height: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 200px;
+    padding-top: 200px;
+
+    text-align: center;
+    background-color: $first-bcg-color;
+
+
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+
+        text-align: center;
+        letter-spacing: 0.06em;
+
+        text-transform: uppercase;
+        color: $secondary-text-color;
+    }
+
+
+
+}
+
+
+
+.hero__button {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    padding: 10px 32px;
+
+    letter-spacing: 0.06em;
+    color: $secondary-text-color;
+    background-color: $link-color;
+
+    border-radius: 4px;
+    border: none;
+
+    transition: box-shadow $transition-style, background-color $transition-style;
+
+
+
+    &:hover,
+    &:focus {
+        background-color: $link-bg-color;
+        box-shadow: $second-button-box-shadow;
+    }
+}

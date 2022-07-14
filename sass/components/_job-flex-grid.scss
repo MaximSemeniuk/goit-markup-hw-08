@@ -1,0 +1,14 @@
+.jobs__list {
+    $indent: 30px;
+    display: flex;
+    margin: calc(-1 * $indent / 2);
+}
+
+.jobs__item {
+    $basis: 100%;
+    $indent: 30px;
+    $items: 3;
+    $amount: 3;
+    margin: calc($indent / 2);
+    flex-basis: calc(($basis - $indent * $items) / $amount);
+}

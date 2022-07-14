@@ -1,0 +1,14 @@
+.clients__list {
+    $indent: 30px;
+    display: flex;
+    margin: calc(-1 * $indent / 2);
+}
+
+.clients__item {
+    $basis: 100%;
+    $indent: 30px;
+    $items: 6;
+    $amount: 6;
+    margin: calc($indent / 2);
+    flex-basis: calc(($basis - $indent * $items) / $amount);
+}

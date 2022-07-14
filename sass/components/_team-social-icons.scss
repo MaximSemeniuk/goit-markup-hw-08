@@ -1,0 +1,48 @@
+.team-content__list {
+    display: flex;
+
+    justify-content: center;
+}
+
+.team-content__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-content__link {
+    display: flex;
+
+    cursor: pointer;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    color: $main-icon-color;
+    justify-content: center;
+    align-items: center;
+
+    transition: color $transition-style, background-color $transition-style;
+
+
+    &:hover,
+    &:focus {
+        background-color: $link-color;
+        color: $secondary-text-color;
+    }
+}
+
+
+
+.team-content__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+
+
+    &:hover,
+    &:focus {
+        fill: $secondary-text-color;
+    }
+
+}
