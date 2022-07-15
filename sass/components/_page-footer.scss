@@ -5,8 +5,30 @@
 
 
     &__container {
-        display: flex;
-        align-items: baseline;
+        
+
+        
+
+       
+        @media screen and(min-width:768px) {
+
+            display: flex;
+            
+            
+            align-items: baseline;
+        }
+
+        @media screen and(max-width:1139px) {
+         text-align: center;
+        flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+
+        @media screen and(min-width:1140px) {
+            
+            
+        }
     }
 
 

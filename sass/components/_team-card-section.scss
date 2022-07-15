@@ -2,10 +2,6 @@
     background-color: $second-bcg-color;
 
 
-    &__list {
-        $items: 4;
-        $amount: 3;
-    }
 
     &__card {
         border-radius: 0px 0px 4px 4px;
@@ -25,34 +21,101 @@
         color: $title-text-color;
     }
 
+        &__content {
+            padding-top: 30px;
+            padding-bottom: 39px;
+    
+        }
+    
+        &__name {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.18;
+    
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $title-text-color;
+        }
+    
+    
+        &__job {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.18;
+            margin-bottom: 16px;
+    
+            text-align: center;
+            letter-spacing: 0.03em;
+        }
+
+
+
+
+
+
+
 }
 
 
-.team-content {
-    padding-top: 30px;
-    padding-bottom: 39px;
+.team__card:not(:last-child) {
 
-
-    &__name {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.18;
-
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: $title-text-color;
+    @media screen and(max-width:767px) {
+        margin-bottom: 30px;
+        flex-basis: 100%;
     }
 
 
-    &__job {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.18;
-        margin-bottom: 16px;
-
-        text-align: center;
-        letter-spacing: 0.03em;
-    }
 }
+ 
+
+    
+
+
+@media screen and(min-width:768px) {
+
+    .team__list {
+        @media screen and(max-width:1139px) {
+            flex-wrap: wrap;
+        }
+        $indent: 30px;
+        display: flex;
+        
+        margin: calc(-1 * $indent / 2);
+    }
+
+    .team__card {
+        $basis: 100%;
+        $indent: 30px;
+        $items: 2;
+        $amount: 2;
+        margin: calc($indent / 2);
+        flex-basis: calc(($basis - $indent * $items) / $amount);
+    }
+
+
+}
+
+
+@media screen and(min-width:1140px) {
+
+    .team__list {
+        $indent: 30px;
+        display: flex;
+        margin: calc(-1 * $indent / 2);
+    }
+
+    .team__card {
+        $basis: 100%;
+        $indent: 30px;
+        $items: 4;
+        $amount: 3;
+        margin: calc($indent / 2);
+        flex-basis: calc(($basis - $indent * $items) / $amount);
+    }
+
+
+}
+
+

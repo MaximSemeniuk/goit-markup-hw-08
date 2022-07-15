@@ -20,7 +20,7 @@
 
     cursor: pointer;
 
-    width: 170px;
+    // width: 170px;
     height: 92px;
 
     border: 1px solid $main-icon-color;
@@ -49,3 +49,32 @@
     width: 106px;
     height: 60px;
 }
+
+
+@media screen and(min-width:480px) {
+
+    .clients__list {
+        @media screen and(max-width:1139px) {
+            flex-wrap: wrap;
+        }
+            $indent: 30px;
+            display: flex;
+            
+            margin: calc(-1 * $indent / 2);
+        }
+    
+        .clients__item {
+            @media screen and(min-width:1140px) {
+            $items: 6;
+                $amount: 5;
+            }
+            $basis: 100%;
+            $indent: 30px;
+            $items: 2;
+            $amount: 2;
+            margin: calc($indent / 2);
+            flex-basis: calc(($basis - $indent * $items) / $amount);
+        }
+    
+}
+

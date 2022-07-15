@@ -27,14 +27,20 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        width: 528px;
-        height: 581px;
+        // width: 528px;
+        // height: 581px;
 
         padding: 40px;
 
         background-color: $secondary-text-color;
         box-shadow: $modal-box-shadow;
         border-radius: 4px;
+
+        @media screen and(min-width:480px) {
+            width: 450px;
+            height: 609px;
+            
+        }
     }
 
 
@@ -81,7 +87,7 @@
 
 
 
-.title-backdrop {
+.backdrop__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;

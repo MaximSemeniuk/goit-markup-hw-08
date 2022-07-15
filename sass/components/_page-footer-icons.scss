@@ -1,38 +1,43 @@
-.social {
+.footer__social {
+    
+@media screen and(max-width:767px) {
+    margin-top: 60px;
+
+    
+    
+}
+
+@media screen and(min-width:1140px) {
     margin-left: 70px;
+}
 
-
-    &__list {
+    &-list {
         display: flex;
+
+        @media screen and(min-width:480px) {
+            justify-content: center;
+            
+        }
+        
     }
 
 
 
-    &__icon {
+    &-icon {
         fill: currentColor;
 
         width: 20px;
         height: 20px;
     }
 
-        &__item:not(:last-child) {
-            margin-right: 10px;
-        }
+        
 
 }
 
-.social__link {
-    display: flex;
+.footer__social-link {
+    
 
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    width: 44px;
-    height: 44px;
-
-    border-radius: 50%;
+    
     color: $secondary-text-color;
     background-color: $main-bg-icon-color;
 

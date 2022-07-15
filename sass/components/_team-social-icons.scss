@@ -1,26 +1,16 @@
-.team-content__list {
+.team__social-list {
     display: flex;
 
     justify-content: center;
 }
 
-.team-content__item:not(:last-child) {
-    margin-right: 10px;
-}
 
-.team-content__link {
-    display: flex;
 
-    cursor: pointer;
-
-    width: 44px;
-    height: 44px;
-
-    border-radius: 50%;
+.team__social-link {
+    
 
     color: $main-icon-color;
-    justify-content: center;
-    align-items: center;
+    
 
     transition: color $transition-style, background-color $transition-style;
 
@@ -34,7 +24,7 @@
 
 
 
-.team-content__icon {
+.team__social-icon {
     fill: currentColor;
     width: 20px;
     height: 20px;
