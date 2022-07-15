@@ -5,7 +5,10 @@
     @import "./base/styles";
     @import "./base/main-section-style";
     @import "./base/layout-container-style";
+    @import './components/social-icons';
     @import "./components/page-header";
+    @import './components/page-header-contact';
+    @import './components/nav';
     @import "./components/logo";
     @import "./components/hero-section";
     @import "./components/backdrop";
