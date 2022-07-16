@@ -1,0 +1,28 @@
+@media screen and(min-width:480px) {
+  .header__button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-left: auto;
+
+    background-color: transparent;
+
+    &.is-open .icon__cross {
+      display: block;
+    }
+
+    &.is-open .icon__menu {
+      display: none;
+    }
+  }
+
+  .icon__cross {
+    display: none;
+  }
+}
+
+@media screen and(min-width:767px) {
+  .header__button {
+    display: none;
+  }
+}

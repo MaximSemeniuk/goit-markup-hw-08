@@ -1,150 +1,124 @@
-
-
 .portfolio__project-list {
-    
-    
+  @media screen and(max-width:767px) {
+    margin-top: 40px;
+  }
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    $indent: 30px;
 
-    @media screen and(max-width:767px) {
-        
-        margin-top: 40px;
-    
-    }
-    @media screen and(min-width:768px) {
-        display: flex;
-        flex-wrap: wrap;
-        $indent: 30px;
-                
-           margin: calc(-1 * $indent / 2);
-        
-    }
+    margin: calc(-1 * $indent / 2);
+  }
 }
 
 .portfolio__project-item {
-    @media screen and(max-width:767px) {
-        // width: 450px;
-          
-    }
+  @media screen and(min-width:1140px) {
+    $items: 3;
+    $amount: 3;
+  }
 
-    @media screen and(min-width:768px) {
-       
-        $basis: 100%;
-                $indent: 30px;
-                $items: 2;
-                $amount: 2;
-                margin: calc($indent / 2);
-                flex-basis: calc(($basis - $indent * $items) / $amount);
-        
-    }
-         @media screen and(min-width:1140px) {
-            $basis:100%;
-            $indent: 30px;
-                $items: 3;
-                $amount: 3;
-                margin: calc($indent / 2);
-                flex-basis: calc(($basis - $indent * $items) / $amount);
-         }
+  @media screen and(min-width:768px) {
+    $basis: 100%;
+    $indent: 30px;
+    $items: 2;
+    $amount: 2;
+    margin: calc($indent / 2);
+    flex-basis: calc(($basis - $indent * $items) / $amount);
+  }
+  @media screen and(min-width:1140px) {
+    $basis: 100%;
+    $indent: 30px;
+    $items: 3;
+    $amount: 3;
+    margin: calc($indent / 2);
+    flex-basis: calc(($basis - $indent * $items) / $amount);
+  }
 }
 
 .portfolio__project-item:not(:last-child) {
-    @media screen and(max-width:767px) {
-        margin-bottom: 30px;
-    }
-    
+  @media screen and(max-width:767px) {
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio__project-card {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio__project-pic {
-    @media screen and(max-width:768px) {
-        width: 450px;
-        
-    }
-    
+  @media screen and(max-width:767px) {
+    width: 450px;
+  }
 }
 
 .portfolio__project-desc {
-    position: absolute;
+  position: absolute;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    top: 0;
-    transform: translateY(100%);
+  top: 0;
+  transform: translateY(100%);
 
-    padding: 63px 24px;
+  padding: 63px 24px;
 
-    text-align: center;
+  text-align: center;
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-    letter-spacing: 0.03em;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
 
-    color: $secondary-text-color;
+  color: $secondary-text-color;
 
-    background-color: $first-overlay-bg-color;
+  background-color: $first-overlay-bg-color;
 
-    transition: transform $transition-style;
+  transition: transform $transition-style;
 
-
-    .portfolio__project-link:hover &,
-    .portfolio__project-link:focus & {
-        transform: translateY(0);
-
-    }
+  .portfolio__project-link:hover &,
+  .portfolio__project-link:focus & {
+    transform: translateY(0);
+  }
 }
-
-
 
 .portfolio__project-link {
-    display: block;
+  display: block;
 
-    transition: box-shadow $transition-style;
+  transition: box-shadow $transition-style;
 
-
-    &:hover,
-    &:focus {
-        box-shadow: $first-card-box-shadow;
-    }
-
-
+  &:hover,
+  &:focus {
+    box-shadow: $first-card-box-shadow;
+  }
 }
 
-
-
 .portfolio__project-box {
-    padding: 20px 24px;
-    border: 1px solid $secondary-border-color;
-    border-top: none;
+  padding: 20px 24px;
+  border: 1px solid $secondary-border-color;
+  border-top: none;
 }
 
 .portfolio__project-box--indent {
-    @media screen and(max-width:1140px) {
-
-        padding-bottom: 56px;
-    }
+  @media screen and(max-width:1140px) {
+    padding-bottom: 56px;
+  }
 }
 
 .portfolio__project-title {
-    margin-bottom: 4px;
-    margin-right: auto;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: $title-text-color;
+  @include font(700, 18px, 36px, 0.06em);
+  
+  margin-bottom: 4px;
+  margin-right: auto;
+
+  color: $title-text-color;
 }
 
 .portfolio__project-text {
-    margin-right: auto;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
+  @include font(400, 16px,30px,0.03em);
 
-    letter-spacing: 0.03em;
+  margin-right: auto;
+  
 
-    color: $primari-text-color;
+  color: $primari-text-color;
 }

@@ -1,54 +1,42 @@
 .contacts {
+  margin-left: auto;
 
-    margin-left: auto;
+  @media screen and(max-width:767px) {
+    display: none;
+  }
 
+  @media screen and(min-width:1140px) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:nth-child(n + 2) {
     @media screen and(min-width:1140px) {
-        display: flex;
-            align-items: center;
-    }
-    
-
-
-    @media screen and(max-width:767px) {
-            display: none;
-    
-        }
-
-
-
-    &__item:nth-child(n + 2) {
-        @media screen and(min-width:1140px) {
-            margin-left: 50px;
-            
-        }
-
-        @media screen and(max-width:1140px) {
-                margin-top: 10px;
-        
-            }
+      margin-left: 50px;
     }
 
-    &__icon {
-        margin-right: 10px;
-
-        fill: currentColor;
+    @media screen and(max-width:1140px) {
+      margin-top: 10px;
     }
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+  }
 }
 
 .contacts__link {
-    cursor: pointer;
+  @include font(500, 14px, 16px, 0.02em);
+  cursor: pointer;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+  color: $primari-text-color;
 
-    color: $primari-text-color;
+  transition: color $transition-style;
 
-    transition: color $transition-style;
-
-    &:hover,
-    &:focus {
-        color: $link-color;
-    }
+  &:hover,
+  &:focus {
+    color: $link-color;
+  }
 }

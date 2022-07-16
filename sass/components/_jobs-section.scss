@@ -1,46 +1,51 @@
-
 .jobs {
-    padding-top: 0;
+  padding-top: 0;
 
-    &__title {
-        margin-bottom: 50px;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
-        text-align: center;
-        letter-spacing: 0.03em;
+  @media screen and(max-width:1139px) {
+    display: none;
+  }
 
-        color: $title-text-color;
-    }
+  &__title {
+    margin-bottom: 50px;
 
-    &__item {
-        position: relative;
-    }
+    text-align: center;
 
-    &__text {
-        position: absolute;
+    color: $title-text-color;
+  }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &__list {
+    $indent: 30px;
+    display: flex;
+    margin: calc(-1 * $indent / 2);
+  }
 
-        left: 0;
-        bottom: 0;
+  &__item {
+    position: relative;
 
-        width: 100%;
-        min-height: 70px;
+    $basis: 100%;
+    $indent: 30px;
+    $items: 3;
+    $amount: 3;
+    margin: calc($indent / 2);
+    flex-basis: calc(($basis - $indent * $items) / $amount);
+  }
 
-        font-weight: 700;
-        line-height: 1.14px;
+  &__text {
+    position: absolute;
 
-        text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        color: $secondary-text-color;
-        background: $first-text-bcg-color;
-    }
+    left: 0;
+    bottom: 0;
 
-    @media screen and(min-width:480px) {
-        display: none;
-        
-    }
+    width: 100%;
+    min-height: 70px;
+
+    text-transform: uppercase;
+
+    color: $secondary-text-color;
+    background: $first-text-bcg-color;
+  }
 }

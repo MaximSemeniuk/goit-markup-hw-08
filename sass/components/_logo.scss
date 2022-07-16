@@ -1,40 +1,27 @@
-
-
 .logo {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    text-decoration: none;
+  @include font(700, 26px, 31px, 0.03em);
 
+  font-family: 'Raleway';
 
-    &--color--blue {
-        color: $first-logo-color;
-    }
+  text-decoration: none;
+
+  &--color--blue {
+    color: $first-logo-color;
+  }
 }
-
 
 // header logo
 
 .header__logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    
-    
-    color: $second-logo-color;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  color: $second-logo-color;
 }
-
-
 
 // footer logo
 .footer__logo {
-    display: block;
-    
-    color: $secondary-text-color;
+  display: block;
+
+  color: $secondary-text-color;
 }
-
-
-
-
-

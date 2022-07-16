@@ -1,78 +1,66 @@
 .portfolio__buttons-list {
-    display: flex;
-    
+  display: flex;
 
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
-    @media screen and(min-width:767px) {
-justify-content: center;
-        
-    }
+  @media screen and(min-width:767px) {
+    justify-content: center;
+  }
 }
 
 .portfolio__button-item:not(:first-child) {
-    @media screen and(min-width:767px) {
-        margin-left: 8px;
-    }
-    
- }
+  @media screen and(min-width:768px) {
+    margin-left: 8px;
+  }
+}
 
- @media screen and(max-width:767px) {
-        
+@media screen and(max-width:767px) {
+  .portfolio__buttons-list {
+    $indent: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * $indent / 2);
+  }
 
-       .portfolio__buttons-list {
-                $indent: 16px;
-                display: flex;
-                flex-wrap: wrap;
-                margin: calc(-1 * $indent / 2);
-            }
-        
-       .portfolio__button-item {
-                $basis: 100%;
-                $indent: 16px;
-                $items: 3;
-                $amount:3;
-                margin: calc($indent / 2);
-                // flex-basis: calc(($basis - $indent * $items) / $amount);
-            }
-        
-    }
+  .portfolio__button-item {
+    $basis: 100%;
+    $indent: 16px;
+    $items: 3;
+    $amount: 3;
+    margin: calc($indent / 2);
+  }
+}
 
-    @media screen and(min-width:767px) {
-        
-    }
-
+@media screen and(min-width:767px) {
+}
 
 .portfolio__button-filter {
-    cursor: pointer;
+  @include font(500, 16px, 26px, 0.03em);
 
-    border-radius: 4px;
-    border: transparent;
+  cursor: pointer;
 
-    padding: 6px 22px;
+  border-radius: 4px;
+  border: transparent;
 
-    text-align: center;
+  padding: 6px 22px;
 
-    text-decoration: none;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.03em;
-    background-color: $second-bcg-color;
-    color: $title-text-color;
+  text-align: center;
 
-    transition: color $transition-style, background-color $transition-style,
-        box-shadow $transition-style;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
 
+  background-color: $second-bcg-color;
+  color: $title-text-color;
 
+  transition: color $transition-style, background-color $transition-style,
+    box-shadow $transition-style;
 
-    &:hover,
-    &:focus {
-        background-color: $link-color;
-        color: $secondary-text-color;
+  &:hover,
+  &:focus {
+    background-color: $link-color;
+    color: $secondary-text-color;
 
-        box-shadow: $first-button-box-shadow;
-    }
+    box-shadow: $first-button-box-shadow;
+  }
 }

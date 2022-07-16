@@ -1,29 +1,25 @@
-
 .social {
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    cursor: pointer;
 
-    &__link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-            cursor: pointer;
-    
-            width: 44px;
-            height: 44px;
-    
-            border-radius: 50%;
-        }
-    
-        &__item:not(:last-child) {
-            margin-right: 10px;
-        }
+    width: 44px;
+    height: 44px;
 
-                &-icon {
-                    fill: currentColor;
-        
-                    width: 20px;
-                    height: 20px;
-                }
+    border-radius: 50%;
+  }
 
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &-icon {
+    fill: currentColor;
+
+    width: 20px;
+    height: 20px;
+  }
 }
