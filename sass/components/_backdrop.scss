@@ -12,7 +12,15 @@
   background-color: $backdrop-bg-color;
   transition: opacity $transition-style;
 
-  overflow-y: scroll;
+  @media screen and(max-width:1140px) {
+    overflow-y: scroll;
+    padding: 208px 159px;
+  }
+
+  @media screen and(max-width:767px) {
+    overflow-y: scroll;
+    padding: 93px 15px;
+  }
 
   &.is-hidden {
     opacity: 0;
@@ -20,12 +28,6 @@
   }
 
   &__modal {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     width: 528px;
     height: 581px;
 
@@ -35,8 +37,16 @@
     box-shadow: $modal-box-shadow;
     border-radius: 4px;
 
+    @media screen and(min-width:1140px) {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     @media screen and(min-width:480px) and(max-width:1139px) {
-      // padding: 93px 15px;
+      position: relative;
       width: 450px;
       height: 609px;
     }
