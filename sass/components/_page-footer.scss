@@ -4,8 +4,9 @@
   background-color: $first-bcg-color;
 
   &__container {
-    text-align: center;
-
+    @media screen and(min-width:480px) and(max-width:1139px) {
+      text-align: center;
+    }
     @media screen and(min-width:768px) {
       display: flex;
 
