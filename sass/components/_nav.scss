@@ -23,7 +23,10 @@
 
     transition: opacity $transition-style;
 
+    pointer-events: none;
+
     &.is-open {
+      pointer-events: all;
       z-index: 2;
       opacity: 1;
     }
