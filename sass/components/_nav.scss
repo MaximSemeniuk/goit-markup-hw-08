@@ -1,13 +1,38 @@
-.header__menu {
+.header__nav {
   display: flex;
 }
 
 .nav {
-  align-items: center;
-  display: flex;
+  @media screen and(min-width:768px) {
+    align-items: center;
+    display: flex;
+  }
 
   @media screen and(max-width:767px) {
-    display: none;
+    position: absolute;
+
+    opacity: 0;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 48px 40px;
+
+    background-color: $secondary-text-color;
+
+    transition: opacity $transition-style;
+
+    &.is-open {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and(max-width:767px) {
+      margin-bottom: 32px;
+    }
   }
 
   &__item--active {
@@ -15,18 +40,25 @@
   }
 
   &__item:nth-child(n + 2) {
-    margin-left: 50px;
+    @media screen and(min-width:768px) {
+      margin-left: 50px;
+    }
   }
 }
 
 .nav__link {
-  @include font(500, 14px,16px,0.02em);
-  
   display: block;
-  text-decoration: none;
-  
+
   color: $title-text-color;
   transition: color $transition-style;
+
+  @media screen and(max-width:767px) {
+    @include font(500, 40px, 47px, 0.02em);
+  }
+
+  @media screen and(min-width:768px) {
+    @include font(500, 14px, 16px, 0.02em);
+  }
 
   &:hover,
   &:focus {
@@ -38,16 +70,18 @@
   }
 
   &--active::after {
-    position: absolute;
-    content: '';
+    @media screen and(min-width:768px) {
+      position: absolute;
+      content: '';
 
-    bottom: -32px;
-    left: 0;
-    border-radius: 2px;
+      bottom: -32px;
+      left: 0;
+      border-radius: 2px;
 
-    width: 100%;
-    height: 4px;
+      width: 100%;
+      height: 4px;
 
-    background-color: $link-color;
+      background-color: $link-color;
+    }
   }
 }
