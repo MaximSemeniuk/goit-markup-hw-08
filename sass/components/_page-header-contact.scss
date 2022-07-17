@@ -1,11 +1,21 @@
 .contacts {
-  margin-left: auto;
-
   @media screen and(max-width:767px) {
-    display: none;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 302px;
+    margin-bottom: 64px;
+
+    &__item:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    margin-left: 65px;
   }
 
   @media screen and(min-width:1140px) {
+    margin-left: 284px;
     display: flex;
     align-items: center;
   }
@@ -15,7 +25,7 @@
       margin-left: 50px;
     }
 
-    @media screen and(max-width:1140px) {
+    @media screen and(min-width:768px) and(max-width:1139px) {
       margin-top: 10px;
     }
   }
@@ -24,16 +34,39 @@
     margin-right: 10px;
 
     fill: currentColor;
+
+    @media screen and(max-width:767px) {
+      display: none;
+    }
   }
 }
 
 .contacts__link {
-  @include font(500, 14px, 16px, 0.02em);
   cursor: pointer;
 
   color: $primari-text-color;
 
   transition: color $transition-style;
+
+  @media screen and(max-width:767px) {
+    @include font(500, 34px, 40px, 0.02em);
+    color: $link-color;
+  }
+
+  @media screen and(min-width:1140px) {
+    @include font(500, 14px, 16px, 0.02em);
+  }
+
+  @media screen and(min-width:768px) and(max-width:1139px) {
+    @include font(500, 12px, 14px, 0.02em);
+  }
+
+  @media screen and(max-width:767px) {
+    &--resize {
+      @include font(500, 24px, 28px, 0.02em);
+      color: $primari-text-color;
+    }
+  }
 
   &:hover,
   &:focus {
