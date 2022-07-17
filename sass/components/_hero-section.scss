@@ -39,6 +39,16 @@
   }
 }
 
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, $first-linear-gradient, $first-linear-gradient),
+      url(../images/background-image-hero@2x.jpg);
+  }
+}
+
 .hero__button {
   cursor: pointer;
 
