@@ -1,4 +1,4 @@
-@media screen and(min-width:480px) {
+@media screen and(max-width:767px) {
   .header__button {
     margin: 0;
     padding: 0;
@@ -8,16 +8,21 @@
     background-color: transparent;
 
     &.is-open .icon__cross {
-      display: block;
+      opacity: 1;
     }
 
     &.is-open .icon__menu {
-      display: none;
+      opacity: 0;
     }
   }
 
+  .header__icon {
+    z-index: 3;
+    position: relative;
+  }
+
   .icon__cross {
-    display: none;
+    opacity: 0;
   }
 }
 
