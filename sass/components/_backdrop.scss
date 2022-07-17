@@ -12,8 +12,9 @@
   background-color: $backdrop-bg-color;
   transition: opacity $transition-style;
 
-  @media screen and(max-width:800px) {
+  @media screen and(max-width:1139px) {
     overflow-y: scroll;
+
     padding: 208px 159px;
   }
 
@@ -37,7 +38,7 @@
     box-shadow: $modal-box-shadow;
     border-radius: 4px;
 
-    @media screen and(min-width:800px) {
+    @media screen and(min-width:1140px) {
       position: absolute;
 
       top: 50%;
@@ -45,9 +46,10 @@
       transform: translate(-50%, -50%);
     }
 
-    @media screen and(min-width:480px) and(max-width:800px) {
+    @media screen and(min-width:480px) and(max-width:1139px) {
       position: relative;
-      width: 100%;
+      margin: auto;
+      width: 450px;
       height: 609px;
     }
   }
