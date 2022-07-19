@@ -29,7 +29,7 @@
     box-shadow: $modal-box-shadow;
     border-radius: 4px;
 
-    @media screen and(min-width:551px) {
+    @media screen and(min-width:1024px) {
       position: absolute;
 
       top: 50%;
@@ -44,6 +44,12 @@
     @media screen and(max-width:550px) {
       position: relative;
       width: 95%;
+      margin: auto;
+    }
+
+    @media screen and(max-width:1023px) {
+      position: relative;
+      width: 60%;
       margin: auto;
     }
   }
