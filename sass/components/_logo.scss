@@ -13,10 +13,12 @@
 // header logo
 
 .header__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-
   color: $second-logo-color;
+
+  @media screen and(min-width:480px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 // footer logo
