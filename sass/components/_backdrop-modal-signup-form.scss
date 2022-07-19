@@ -1,7 +1,7 @@
 .signup {
   display: flex;
   flex-direction: column;
-  width: 448px;
+  max-width: 448px;
   margin-top: 12px;
 
   &__label {
@@ -64,8 +64,8 @@
   resize: none;
 
   &::placeholder {
-    @include font(400,14px,16px,0.01em);
-    
+    @include font(400, 14px, 16px, 0.01em);
+
     color: $signup-placeholder-color;
   }
 }
