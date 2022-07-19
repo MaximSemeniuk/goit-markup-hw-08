@@ -10,6 +10,10 @@
     }
   }
 
+  @media screen and(max-width:479px) {
+    margin-top: 150px;
+  }
+
   @media screen and(min-width:768px) {
     margin-left: 65px;
   }
@@ -42,15 +46,16 @@
 }
 
 .contacts__link {
+  @include font(500, 24px, 28px, 0.02em);
   cursor: pointer;
 
   color: $primari-text-color;
 
   transition: color $transition-style;
 
-  @media screen and(max-width:767px) {
-    @include font(500, 34px, 40px, 0.02em);
-    color: $link-color;
+  @media screen and(min-width:480px) {
+    @include font(500, 24px, 28px, 0.02em);
+    color: $primari-text-color;
   }
 
   @media screen and(min-width:1140px) {
@@ -61,10 +66,10 @@
     @include font(500, 12px, 14px, 0.02em);
   }
 
-  @media screen and(max-width:767px) {
+  @media screen and(min-width:480px) and(max-width:767px) {
     &--resize {
-      @include font(500, 24px, 28px, 0.02em);
-      color: $primari-text-color;
+      @include font(500, 34px, 40px, 0.02em);
+      color: $link-color;
     }
   }
 
