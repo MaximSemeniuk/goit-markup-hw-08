@@ -27,9 +27,7 @@
 
   &__title {
     @include font(900, 44px, 60px, 0.06em);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
+
     margin-bottom: 30px;
 
     text-align: center;
