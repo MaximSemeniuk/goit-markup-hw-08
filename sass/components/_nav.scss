@@ -1,20 +1,28 @@
 .header__nav {
-  display: flex;
+  @media screen and(min-width:768px) {
+    display: flex;
+  }
+  @media screen and(max-width:767px) {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 15px;
+  }
 }
 
 .nav {
   @media screen and(min-width:768px) {
+    margin-left: auto;
     align-items: center;
     display: flex;
   }
 
   @media screen and(max-width:767px) {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     opacity: 0;
 
-    top: 0;
-    left: 0;
     width: 100%;
 
     padding: 48px 40px;
@@ -27,9 +35,13 @@
 
     &.is-open {
       pointer-events: all;
-      z-index: 2;
+      z-index: 1;
       opacity: 1;
     }
+  }
+
+  @media screen and(max-width:480px) {
+    text-align: center;
   }
 
   &__item:not(:last-child) {
