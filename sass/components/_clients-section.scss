@@ -40,10 +40,12 @@
 }
 
 .clients__list {
-  display: flex;
-
   $indent: 30px;
   margin: calc(-1 * $indent / 2);
+
+  @media screen and(min-width:480px) {
+    display: flex;
+  }
 
   @media screen and(min-width:480px) and(max-width:1139px) {
     flex-wrap: wrap;
@@ -57,8 +59,8 @@
   }
   $basis: 100%;
   $indent: 30px;
-  $items: 2;
-  $amount: 2;
+  $items: 3;
+  $amount: 3;
   margin: calc($indent / 2);
   flex-basis: calc(($basis - $indent * $items) / $amount);
 }
