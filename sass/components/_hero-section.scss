@@ -26,6 +26,10 @@
   }
 
   &__title {
+    @include font(900, 44px, 60px, 0.06em);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
     margin-bottom: 30px;
 
     text-align: center;
@@ -33,7 +37,7 @@
     text-transform: uppercase;
     color: $secondary-text-color;
 
-    @media screen and(min-width:480px) and(max-width:1139px) {
+    @media screen and(max-width:1139px) {
       @include font(null, 26px, 42px, null);
     }
   }
