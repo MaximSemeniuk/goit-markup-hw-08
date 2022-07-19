@@ -724,12 +724,18 @@ body {
   }
 }
 .hero__title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3636363636;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
-@media screen and (min-width: 480px) and (max-width: 1139px) {
+@media screen and (max-width: 1139px) {
   .hero__title {
     font-size: 26px;
     line-height: 1.6153846154;
